@@ -63,3 +63,19 @@
   color: white;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap; // 允许内容换行，防止文字叠在一起
+        height: auto !important; // 强制取消 PC 端固定的高度
+        padding: 10px;
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            width: 100%; // 让菜单独占一行，不跟 Logo 挤
+            margin: 10px 0;
+            
+            li { margin: 0 10px; }
+        }
+    }
+}
