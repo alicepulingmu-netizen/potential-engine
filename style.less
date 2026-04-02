@@ -1,3 +1,21 @@
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; // 让 Logo、菜单、按钮垂直排列
+        height: auto;           // 高度自适应，不要固定 80px
+        padding: 15px;
+
+        .nav-links {
+            flex-direction: row; // 菜单项横着排
+            flex-wrap: wrap;     // 换行，防止重叠
+            justify-content: center;
+            margin: 10px 0;
+            
+            li { margin: 5px 10px; } // 间距调小
+        }
+        
+        .logo { font-size: 18px; } // Logo 调小
+    }
+}
 /* 基础重置 */
 * {
     margin: 0;
