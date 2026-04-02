@@ -73,28 +73,19 @@
     color: white;
     text-decoration: none;
 }
-// 专门针对手机屏幕（宽度小于 768px）
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; // 让 Logo 和导航垂直排，但要给空间
-        height: auto;           // 撤销固定高度
-        padding: 10px 0;
+        flex-wrap: wrap; // 允许内容换行，防止文字叠在一起
+        height: auto !important; // 强制取消 PC 端固定的高度
+        padding: 10px;
 
         .nav-links {
-            padding: 10px 0;
-            li {
-                margin: 0 5px; // 缩小间距，防止重叠
-                font-size: 14px; // 稍微调小字号
-            }
+            display: flex;
+            justify-content: center;
+            width: 100%; // 让菜单独占一行，不跟 Logo 挤
+            margin: 10px 0;
+            
+            li { margin: 0 10px; }
         }
-        
-        .btn-contact {
-            display: none; // 手机端可以先隐藏按钮，腾出空间
-        }
-    }
-
-    .hero-section h1 {
-        font-size: 24px; // 让标题不要在手机上刷屏
-        padding: 0 10px;
     }
 }
