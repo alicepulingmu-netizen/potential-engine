@@ -16,6 +16,31 @@
         .logo { font-size: 18px; } // Logo 调小
     }
 }
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh; // 手机上大图不要占满全屏，一半就好
+        
+        .hero-content {
+            padding: 0 20px;
+            h1 { 
+                font-size: 1.5rem; // 字号减半
+                line-height: 1.4; 
+            }
+            p { font-size: 0.9rem; }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column; // 垂直堆叠
+        padding: 20px;
+
+        .card {
+            width: 100%; // 宽度占满
+            margin-bottom: 20px; // 下边距留白
+        }
+    }
+}
 /* 基础重置 */
 * {
     margin: 0;
